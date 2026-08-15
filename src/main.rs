@@ -71,3 +71,6 @@ fn main() -> anyhow::Result<()> {
         }
     }
 }
+
+mod detectors;
+mod schema;
