@@ -24,9 +24,9 @@ jobs:
 
   dco-check:
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Check DCO sign-off
-        uses: tisonkun/actions-dco@v1.2
+      - uses: christophebedard/dco-check@v0.3.0
