@@ -1,0 +1,17 @@
+[package]
+name = "cryptofault"
+version = "0.1.0"
+edition = "2021"
+authors = ["Luis Fidel Castellanos Diaz <luis@vectortelemetryresearch.com>"]
+description = "Legacy crypto weakness detector for OT/ICS environments"
+license = "Apache-2.0"
+repository = "https://github.com/LuisCastellanos-dev/cryptofault"
+homepage = "https://vectortelemetryresearch.com"
+keywords = ["cryptography", "ot-security", "ics", "pcap", "legacy"]
+categories = ["command-line-utilities", "network-programming"]
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+
+[dev-dependencies]

@@ -1,0 +1,8 @@
+/target
+Cargo.lock
+*.pcap
+*.cap
+*.pem
+*.crt
+*.key
+.env
