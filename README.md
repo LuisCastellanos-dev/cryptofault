@@ -70,3 +70,7 @@ Contributions require DCO sign-off — see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 Luis Fidel Castellanos Diaz ([@LuisCastellanos-dev](https://github.com/LuisCastellanos-dev))  
 Founder, [Vector Telemetry Research (VTR)](https://vectortelemetryresearch.com)
+
+## Known limitations
+
+- **`src` field semantics**: for `tls_version` and `plaintext_session` findings, `src` is an IP address; for `weak_key`, `weak_signature`, and `certificate_expiry` findings, `src` is a file path. A dedicated `src_kind` field will be added to the schema when a third external consumer requires it (tracked as technical debt).

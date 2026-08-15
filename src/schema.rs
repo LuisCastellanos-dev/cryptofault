@@ -61,7 +61,10 @@ pub struct Finding {
     pub severity: Severity,
     pub category: Category,
     pub description: String,
-    /// Source IP or file path
+    /// Source IP or file path.
+    /// Convention: for tls_version/plaintext_session findings this is an IP address;
+    /// for weak_key/weak_signature/certificate_expiry findings this is a file path.
+    /// If a explicit src_kind field is needed in the future, add Option<String> with skip_serializing_if.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub src: Option<String>,
     /// Destination IP
