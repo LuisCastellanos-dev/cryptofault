@@ -74,4 +74,4 @@ Founder, [Vector Telemetry Research (VTR)](https://vectortelemetryresearch.com)
 ## Known limitations
 
 - **`src` field semantics**: for `tls_version` and `plaintext_session` findings, `src` is an IP address; for `weak_key`, `weak_signature`, and `certificate_expiry` findings, `src` is a file path. A dedicated `src_kind` field will be added to the schema when a third external consumer requires it (tracked as technical debt).
-- **SHA-256 placeholder**: `scanner::pcap::sha256_bytes` currently uses `DefaultHasher` (non-cryptographic) as a placeholder. Will be replaced with `sha2::Sha256` in v0.3.0 after GPLv2 license audit of the `sha2` crate. Chain of custody for live captures is not cryptographically guaranteed until then.
+- **SHA-256 placeholder**: `scanner::pcap::sha256_bytes` currently uses `DefaultHasher` (non-cryptographic) as a placeholder. Will be replaced with `sha2::Sha256` in v0.3.0. (`sha2` is dual-licensed Apache-2.0/MIT; deferred as technical debt, not a license blocker.) Chain of custody for live captures is not cryptographically guaranteed until then.
